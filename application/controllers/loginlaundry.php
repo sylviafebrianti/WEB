@@ -5,9 +5,6 @@ class Loginlaundry extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('login_view');
-	
-	
-	
 		
 	}
 	public function ceklogin(){
@@ -30,9 +27,7 @@ class Loginlaundry extends CI_Controller {
 	}
 	public function home(){
 		if(isset($_SESSION['login'])){
-			$this->load->view('halamanawal')
-		}else{
-			
+			$this->load->view('halamanawal');
 		}
 	}
 	public function keluar(){

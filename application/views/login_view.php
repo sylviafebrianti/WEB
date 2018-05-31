@@ -21,14 +21,14 @@
     
 	</style>
 	</head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php ?>css/css_login.css">
 	
 	<body>
 		<div class = "container">
 	<div class="wrapper">
 	<div id="example1">
-		<form action="http://localhost/CodeIgniter/loginlaundry/ceklogin" method=POST> 
+		<form action="<?php echo base_url('loginlaundry/ceklogin') ?>" method=POST> 
 		  <center><img src="<?php echo base_url(); ?>assets/img/eLaundry2.png"></center> 
 		    <h3 class="form-signin-heading">  </h3>
 			  <hr class="colorgraph"><br>
