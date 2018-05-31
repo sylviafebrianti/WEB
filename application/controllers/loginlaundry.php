@@ -27,7 +27,7 @@ class Loginlaundry extends CI_Controller {
 	}
 	public function home(){
 		if(isset($_SESSION['login'])){
-			$this->load->view('halamanawal');
+			$this->load->view('halamanawal')
 		}else{
 			
 		}
