@@ -12,6 +12,10 @@ class Login extends CI_Controller{
 				$this->load->view('login_seccess_view');
 			}else{
 				$this->load->view('login_eror_view');
+				
+				
+				
+				
 			}
 		}else{
 			$this->load->view('login_form_view', ['model'=>'$model']);
