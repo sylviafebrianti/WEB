@@ -92,49 +92,42 @@ body {
 <head>
 <body>
 <center><h2>DETAIL TRANSAKSI</h2></center>
+<?php foreach ($pemesanan as $row){ ?>
+<form action="<?php echo base_url().'detail/index'?>" method="post">
 <div id="la">
 <div id="baba">
-
-    <input name="nama" type="text" placeholder="Nomer Nota" >
+    <input name="ID_PEMESANAN" type="text" value="<?php echo $row->ID_PEMESANAN;?>" readonly >
     </br>
-    <input name="nama" type="text" placeholder="Petugas">
+    <input name="NAMA_PETUGAS" type="text" value="<?php echo $row->NAMA_PETUGAS;?>" readonly>
     </br>
 </div>
 
 
-
-<div id="kiri">
-	<form action="pesanan.php" method="post">
-	<label for="nama" class="first-name">Nama</label>
-    <input name="nama" type="text" placeholder="Nama">
+<div id="kiri">	
+	<label class="first-name">Nama</label>
+    <input name="nama" type="text" value="<?php echo $row->NAMA_PELANGGAN;?>">
 		</br>
-	<label for="alamat" class="first-name">Alamat</label>
-    <input name="alamat" type="text" placeholder="Alamat">
+	<label  class="first-name">Alamat</label>
+    <input name="alamat" type="text" value="<?php echo $row->ALAMAT;?>">
 		</br>
-	<label for="nohp" class="first-name">Nomer Handphone</label>
+	<label class="first-name">Nomer Handphone</label>
     <input name="nohp" type="text" placeholder="Nomer Hp">
 		</br>
-		<label for="namaparfum" class="first-name">Nama Parfum</label>
-    <select name="nama parfum" >
-     <option value="Molto Black"> Molto Black </option>
-     <option value="Molto Biru">Molto Biru</option>
-     <option value="Bubble Gum" selected>Bubble Gum</option>
- </select>
+		<label class="first-name">Nama Parfum</label>
+		<input name="namaarfum" type="text" placeholder="namaparfum">
+		
  <h3>Laundry Kiloan</h3>
- <label for="layanan" class="first-name">Layanan</label>
-    <select name="layanan" >
-     <option value="cucikering"> Cuci Kering </option>
-     <option value="cucisetrika"> Cuci Setrika </option>
-     <option value="setrikasaja" selected>Setrika Saja</option>
-     </select>
+ <label class="first-name">Layanan</label>
+ <input name="layanan" type="text" placeholder="layanan">
      </br>
-	<label for="berat" class="first-name">Berat</label>
+	<label class="first-name">Berat</label>
     <input name="berat" type="number" placeholder="Berat/kg">
     </br>
-	<label for="harga" class="first-name">Harga</label>
+	<label class="first-name">Harga</label>
     <input name="harga" type="text" placeholder="Harga">
  </div>
  </br>
+ 
  <div id="kanan">
 	<label for="tglmasuk" class="first-name">Tanggal Masuk</label>
     <input name="tglmasuk" type="date" placeholder="Tanggal Masuk">
@@ -147,7 +140,6 @@ body {
     <option value="proses"> Proses </option>
     <option value="selesai" selected> Selesai </option>
     </select>
-    
  </div>
 
 
@@ -157,7 +149,6 @@ body {
 </br>
 </br>
 </br>
-
     <h3>Laundry Satuan</h3>
  <label for="layanan" class="first-name">Layanan</label>
     <select name="barang" >
@@ -185,7 +176,8 @@ body {
 	<div>
 		<a href="<?php echo base_url()?>pesananlaundry/kembali"  class="tombol">KEMBALI</a>
 	</div>
-	</<div>
+	</div>
+	
 		
 </body>
 </html>

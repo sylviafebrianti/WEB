@@ -8,7 +8,6 @@ class Pesananlaundry extends CI_Controller {
 		
 		$this->load->view('crud11');
 			
-			
 		}
 	public function kembali(){
 		$this->load->view('halamanawal');

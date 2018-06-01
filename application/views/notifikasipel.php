@@ -54,7 +54,7 @@ table td {
 
 
 body{
-	background: url('assets/img/lo.png');
+	background-color: #80daf0;
 	background-size: cover;
      background-attachment: fixed;
      background-repeat: no-repeat;
@@ -72,9 +72,17 @@ body{
 
                         <th>Id Pemesanan</th>
 
-                        <th>Nama Pelanggan</th>
+                        <th>Nama Petugas</th>
 
+                        <th>Nama</th>
+                        
                         <th>Alamat</th>
+                        
+                        <th>Nomer Hp</th>
+                        
+                        <th>Parfum</th>
+                        
+                        <th>Layanan</th>
                         
                         <th>Aksi</th>
 
@@ -86,9 +94,13 @@ body{
                         foreach($notifikasi as $row){?>
 <tr>
 	<td><?php echo $row-> ID_PEMESANAN;?></td>
+	<td><?php echo $row-> NAMA_PEGAWAI;?></td>
 	<td><?php echo $row-> NAMA_PELANGGAN;?></td>
 	<td><?php echo $row-> ALAMAT;?></td>
-	<td align="center"><a href="#" <?php echo $row->ID_PEMESANAN; ?>>Proses</a></td>	
+	<td><?php echo $row-> NO_HP;?></td>
+	<td><?php echo $row-> NAMA_PARFUM;?></td>
+	<td><?php echo $row-> JENIS_LAYANAN_CUCI;?></td>
+	<td align="center"><a href="<?php echo base_url()?>notifikasicon/pesanan" rel="stylesheet">Proses</a></td>	
 </tr>
                   <?php } ?>
 

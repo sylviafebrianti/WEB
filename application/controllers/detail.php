@@ -5,9 +5,9 @@ class Detail extends CI_Controller {
 		$this->load->model('notifikasimodel');
 	}
 	public function index(){
-		$data['notifikasi']=$this->notifikasimodel->tampil2();
-		var_dump($data);
-		$this->load->view('lala',$data);
+		$where = array('ID_PEMESANAN' => $ID_PEMESANAN);
+		$data['pemesanan']=$this->notifikasimodel->tampil2($where, 'pemesanan')->result();
+		$this->load->view('pesanan',$data);
 	}
 }
 ?>
