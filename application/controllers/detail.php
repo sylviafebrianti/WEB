@@ -10,4 +10,5 @@ class Detail extends CI_Controller {
 		$this->load->view('pesanan',$data);
 	}
 }
+
 ?>

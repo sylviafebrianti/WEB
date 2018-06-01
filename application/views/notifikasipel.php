@@ -89,9 +89,7 @@ body{
 
                   </tr>
 
-                  <?php
-
-                        foreach($notifikasi as $row){?>
+                  <?php foreach($notifikasi as $row){?>
 <tr>
 	<td><?php echo $row-> ID_PEMESANAN;?></td>
 	<td><?php echo $row-> NAMA_PEGAWAI;?></td>

@@ -89,11 +89,11 @@ body {
 	 
 }
 </style>
-<head>
+</head>
 <body>
 <center><h2>DETAIL TRANSAKSI</h2></center>
 <?php foreach ($pemesanan as $row){ ?>
-<form action="<?php echo base_url().'detail/index'?>" method="post">
+<form action="<?php echo base_url().'detail/update'?>" method="post">
 <div id="la">
 <div id="baba">
     <input name="ID_PEMESANAN" type="text" value="<?php echo $row->ID_PEMESANAN;?>" readonly >
@@ -114,7 +114,7 @@ body {
     <input name="nohp" type="text" placeholder="Nomer Hp">
 		</br>
 		<label class="first-name">Nama Parfum</label>
-		<input name="namaarfum" type="text" placeholder="namaparfum">
+		<input name="namaparfum" type="text" placeholder="namaparfum">
 		
  <h3>Laundry Kiloan</h3>
  <label class="first-name">Layanan</label>
@@ -150,12 +150,8 @@ body {
 </br>
 </br>
     <h3>Laundry Satuan</h3>
- <label for="layanan" class="first-name">Layanan</label>
-    <select name="barang" >
-     <option value="cucikering"> Boneka </option>
-     <option value="cucisetrika"> Selimut </option>
-     <option value="setrikasaja" selected>Bedcover</option>
-     </select>
+ 	<label for="layanan" class="first-name">Layanan</label>
+	<input name="layanan" type="text" placeholder="">
      </br>
 	<label for="jumlah" class="first-name">Jumlah</label>
     <input name="jumlah" type="number" placeholder="Jumlah">
@@ -178,6 +174,7 @@ body {
 	</div>
 	</div>
 	
-		
+</form>
+<?php } ?>
 </body>
 </html>

@@ -147,7 +147,7 @@ div.content{
 
 <div style="margin-left: 140px;">
 <div>
-    <input class="button" type="image" src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="250" height="250"/>
+<input value="<?php echo base_url();?>barang_satuan/index" class="button" type="image" src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="250" height="250"/>
 </div>
 <div>
 <input class="button2" type="image" src="<?php echo base_url(); ?>assets/img/parfum1.png" width="250" height="250"/>
