@@ -13,7 +13,9 @@ class Notifikasicon extends CI_Controller {
 	}
  public function pesanan(){
 		$data['pesanan']=$this->notifikasimodel->tampil2();
+		var_dump($data);
 		$this->load->view('pesanan',$data);
+		
 	}
  
 }
