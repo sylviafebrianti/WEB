@@ -140,20 +140,21 @@ div.content{
 
 <div class="w3-container">
 </br>
-  <p>Use the w3-color class to change the background color of the sidebar.</p>
-  <p>If you want an active/current link, to let the user know which page he/she is on, add the w3-color class to one of the links as well.</p>
   
 </div>
 
 <div style="margin-left: 140px;">
-<div>
-<input value="<?php echo base_url();?>barang_satuan/index" class="button" type="image" src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="250" height="250"/>
+<div class="button">
+<a href="<?php echo base_url()?>layanan/index"><img src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="250" height="250"/>
+	</a>
 </div>
-<div>
-<input class="button2" type="image" src="<?php echo base_url(); ?>assets/img/parfum1.png" width="250" height="250"/>
+
+<div class="button2">
+<a href="<?php echo base_url()?>belajar_crud/index"><img src="<?php echo base_url(); ?>assets/img/parfum1.png" width="250" height="250"/></a>
 </div>
-<div>
-<input class="button3" type="image" src="<?php echo base_url(); ?>assets/img/barangsatuan.png" width="250" height="250"/>
+
+<div class="button3">
+<a href="<?php echo base_url()?>barang_satuan/index"><img src="<?php echo base_url(); ?>assets/img/barangsatuan.png" width="250" height="250"/></a>
 </div>
 </div>
 

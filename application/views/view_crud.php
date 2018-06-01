@@ -65,8 +65,8 @@ foreach($data as $r) {
 <td><?php echo $r['ID_PARFUM'] ?></td>
 <td><?php echo $r['NAMA_PARFUM'] ?></td>
 <td><?php echo $r['DESKRIPSI'] ?></td>
-<td><a href="<?=base_url('belajar_crud/update/').$r['ID_PARFUM'];?>"><img src="<?php echo base_url('assets/gambar/editnew.png') ?>" width="35" height="35"></a></td>
-<td><a href="<?=base_url().'belajar_crud/delete/'.$r['ID_PARFUM']?>"><img src="<?php echo base_url('assets/gambar/deletenew.png') ?>" width="30" height="33"></a></td>
+<td><a href="<?=base_url('belajar_crud/update/').$r['ID_PARFUM'];?>"><img src="<?php echo base_url('assets/img/editnew.png') ?>" width="35" height="35"></a></td>
+<td><a href="<?=base_url().'belajar_crud/delete/'.$r['ID_PARFUM']?>"><img src="<?php echo base_url('assets/img/deletenew.png') ?>" width="30" height="33"></a></td>
 </tr>
 
 <?php

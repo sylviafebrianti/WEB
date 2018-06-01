@@ -1,7 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Barang_satuan extends CI_Controller {
+class barang_satuan extends CI_Controller {
+	function __construct(){
+		parent::__construct();
+		$this->load->model('mod2');
+	}
+	
 	public function index(){
 		$data['kodeunik'] = $this->mod2->kode_otomatis();
 		$data= $this->mod2->GetTable('barang_satuan');

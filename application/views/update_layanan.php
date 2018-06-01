@@ -57,7 +57,7 @@ img {
 
 
 <body>
-<img src="<?php echo base_url('assets/gambar/background.jpeg') ?>">
+<img src="<?php echo base_url('assets/img/background.jpeg') ?>">
 <div class="body">
 <h1><div class="h1">Data Parfum</div></h1>
 

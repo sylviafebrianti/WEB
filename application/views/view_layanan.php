@@ -65,8 +65,8 @@ foreach($data as $r) {
 <td><?php echo $r['ID_LAYANAN'] ?></td>
 <td><?php echo $r['JENIS_LAYANAN_CUCI'] ?></td>
 <td><?php echo $r['HARGA_LAYANAN_CUCI'] ?></td>
-<td><a href="<?=base_url('layanan/update/').$r['ID_LAYANAN'];?>"><img src="<?php echo base_url('assets/gambar/editnew.png') ?>" width="35" height="35"></a></td> 
-<td><a href="<?=base_url().'layanan/delete/'.$r['ID_LAYANAN']?>"><img src="<?php echo base_url('assets/gambar/deletenew.png') ?>" width="30" height="33"></a></td>
+<td><a href="<?=base_url('layanan/update/').$r['ID_LAYANAN'];?>"><img src="<?php echo base_url('assets/img/editnew.png') ?>" width="35" height="35"></a></td> 
+<td><a href="<?=base_url().'layanan/delete/'.$r['ID_LAYANAN']?>"><img src="<?php echo base_url('assets/img/deletenew.png') ?>" width="30" height="33"></a></td>
 </tr>
 
 <?php

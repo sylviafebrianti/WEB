@@ -2,6 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Belajar_crud extends CI_Controller {
+	function __construct(){
+		parent::__construct();
+		$this->load->model('mod');
+	}
 	public function index(){
 		$data['kodeunik'] = $this->mod->kode_otomatis();
 		$data= $this->mod->GetTable('parfum');
@@ -9,6 +13,7 @@ class Belajar_crud extends CI_Controller {
 	}
 	public function insert(){
 		if(isset($_POST['submit'])){
+			$this->load->model('mod');
 			$mod = $this->mod->kode_otomatis('parfum');
 			$ID_PARFUM =$mod;
 			$NAMA_PARFUM = $this->input->post('NAMA_PARFUM');

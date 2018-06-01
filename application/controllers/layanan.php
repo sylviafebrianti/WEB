@@ -2,6 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Layanan extends CI_Controller {
+	function __construct(){
+		parent::__construct();
+		$this->load->model('mod1');
+	}
 	public function index(){
 		$data['kodeunik'] = $this->mod1->kode_otomatis();
 		$data= $this->mod1->GetTable('layanan_cuci');
@@ -9,6 +13,7 @@ class Layanan extends CI_Controller {
 	}
 	public function insert(){
 		if(isset($_POST['submit'])){
+			$this->load->model('mod1');
 			$mod = $this->mod1->kode_otomatis('layanan_cuci');
 			$ID_LAYANAN =$mod;
 			$JENIS_LAYANAN_CUCI = $this->input->post('JENIS_LAYANAN_CUCI');

@@ -63,8 +63,8 @@ foreach($data as $r) {
 <td><?php echo $r['NAMA_BARANG_SATUAM'] ?></td>
 <td><?php echo $r['JENIS_BARANG_SATUAN'] ?></td>
 <td><?php echo $r['HARGA_BARANG_SATUAN'] ?></td>
-<td><a href="<?=base_url('barang_satuan/update/').$r['ID_BARANG_SATUAN'];?>"><img src="<?php echo base_url('assets/gambar/editnew.png') ?>" width="35" height="35"></a></td>
-<td><a href="<?=base_url().'barang_satuan/delete/'.$r['ID_BARANG_SATUAN']?>"><img src="<?php echo base_url('assets/gambar/deletenew.png') ?>" width="30" height="33"></a></td>
+<td><a href="<?=base_url('barang_satuan/update/').$r['ID_BARANG_SATUAN'];?>"><img src="<?php echo base_url('assets/img/editnew.png') ?>" width="35" height="35"></a></td>
+<td><a href="<?=base_url().'barang_satuan/delete/'.$r['ID_BARANG_SATUAN']?>"><img src="<?php echo base_url('assets/img/deletenew.png') ?>" width="30" height="33"></a></td>
 </tr>
 
 <?php
