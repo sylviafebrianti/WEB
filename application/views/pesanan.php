@@ -82,7 +82,7 @@ label {
   
 }
 body {
-     background: url('assets/img/lo.png');
+     background:  url('<?php echo base_url('assets/img/lo.png'); ?>');
      background-size: cover;
      background-attachment: fixed;
      background-repeat: no-repeat;
@@ -92,13 +92,13 @@ body {
 </head>
 <body>
 <center><h2>DETAIL TRANSAKSI</h2></center>
-<?php foreach ($pemesanan as $row){ ?>
+<?php foreach($pesanan as $row){?>
 <form action="<?php echo base_url().'detail/update'?>" method="post">
 <div id="la">
 <div id="baba">
-    <input name="ID_PEMESANAN" type="text" value="<?php echo $row->ID_PEMESANAN;?>" readonly >
+    <input name="ID_PEMESANAN" type="text" value="<?php echo $row->ID_PEMESANAN;?>" readonly/>
     </br>
-    <input name="NAMA_PETUGAS" type="text" value="<?php echo $row->NAMA_PETUGAS;?>" readonly>
+    <input name="NAMA_PETUGAS" type="text" value="<?php echo $row->NAMA_PEGAWAI;?>" readonly/>
     </br>
 </div>
 
@@ -166,12 +166,6 @@ body {
 	</br>
 	<div id="ini">
 		<a href="<?php echo base_url()?>pesananlaundry/kembali"  class="tombol">SIMPAN </a>
-	</div>
-
-	<div id="ini">
-	<div>
-		<a href="<?php echo base_url()?>pesananlaundry/kembali"  class="tombol">KEMBALI</a>
-	</div>
 	</div>
 	
 </form>

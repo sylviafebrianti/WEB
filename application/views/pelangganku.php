@@ -59,7 +59,7 @@ table tr:hover td {
   background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
 }
 body{
-	background: url('assets/img/lo.png');
+	background: url('<?php echo base_url('assets/img/lo.png'); ?>');
 	background-size: cover;
      background-attachment: fixed;
      background-repeat: no-repeat;
