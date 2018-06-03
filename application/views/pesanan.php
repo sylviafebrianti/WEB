@@ -77,9 +77,10 @@ label {
 	margin-left: 20px;
 }
 #ini{
-  width: 300px;
+  width: 500px;
   height: 50px;
-  padding: 5px 10px;
+  padding: 20px 30px;
+  margin-left: 650px;
   
   
 }
@@ -95,7 +96,7 @@ body {
 <body>
 <center><h2>DETAIL TRANSAKSI</h2></center>
 <?php foreach($pesanan as $row){?>
-<form action="<?=base_url().'notifikasicon/update'?>" method="POST">
+<form action="<?=base_url().'notifikasicon/tambah'?>" method="POST">
 <div id="la">
 <div id="baba">
     <input name="ID_PEMESANAN" type="text" value="<?php echo $row->ID_PEMESANAN;?>" readonly/>
@@ -123,19 +124,19 @@ body {
  <input name="layanan" type="text" value="<?php echo $row->JENIS_LAYANAN_CUCI;?>"readonly/>
      </br>
 	<label class="first-name">Berat</label>
-    <input name="berat" type="number" value="<?php echo $row->BERAT;?>"readonly/>
+    <input name="berat" type="number" value="<?php echo $row->BERAT_LAYANAN;?>"readonly/>
     </br>
 	<label class="first-name">Harga</label>
-    <input name="harga" type="text" value="<?php ?>">
+    <input name="harga" type="text" value="<?php echo $row->TOTAL_HARGA_LAYANAN ?>">
  </div>
  </br>
  
  <div id="kanan">
 	<label for="tglmasuk" class="first-name">Tanggal Masuk</label>
-    <input name="tglmasuk" type="date" value="<?=$r['TGL_PEMESANAN']?>" ?>">
+    <input name="tglmasuk" type="date" value="">
     </br>
 	<label for="tglkeluar" class="first-name">Tanggal Keluar</label>
-    <input name="tglkeluar" type="date" value="<?=$r['TGL_PENGIRIMAN']?>">
+    <input name="tglkeluar" type="date" value="">
     </br>
     <label for="status" class="first-name">Status</label>
 	<select name="status">
@@ -149,21 +150,21 @@ body {
 </br>
     <h3>Laundry Satuan</h3>
  	<label for="layanan" class="first-name">Barang Satuan</label>
-	<input name="layanan" type="text" placeholder="">
+	<input name="layanan" type="text" value="<?php echo $row->TOTAL_HARGA_LAYANAN ?>">
      </br>
-	<label for="jumlah" class="first-name">Jumlah</label>
-    <input name="jumlah" type="number" placeholder="Jumlah">
+	<label class="first-name">Jumlah</label>
+    <input name="jumlah" type="number" value="<?php echo $row->TOTAL_HARGA_LAYANAN ?>">
     </br>
-	<label for="harga" class="first-name">Harga</label>
-    <input name="harga" type="text" placeholder="Harga">
+	<label class="first-name">Harga</label>
+    <input name="harga" type="text" value="<?php echo $row->TOTAL_HARGA_LAYANAN ?>">
     <br>
-    <label for="total" class="first-name">Total Harga</label>
-    <input name="total" type="text" placeholder="Total">
+    <label class="first-name">Total Harga</label>
+    <input name="total" type="text" value="<?php echo $row->TOTAL_HARGA_LAYANAN ?>">
  </div>
 	</div>
 	</br>
 	<div id="ini">
-		<td><input type="submit" name="submit" value="Simpan"></td>
+		<td><input align="center" type="submit" name="submit" value="Simpan"></td>
 	</div>
 	
 </form>

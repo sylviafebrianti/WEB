@@ -13,11 +13,16 @@ class Notifikasicon extends CI_Controller {
 	}
  public function pesanan(){
 		$data['pesanan']=$this->notifikasimodel->tampil2();
-		var_dump($data);
 		$this->load->view('pesanan',$data);
-		
-	
 	}
+	function tambah(){
+    $data = array(
+        'TGL_PEMESANAN'		=> $this->input->post('TGL_PEMESANAN'),
+        'TGL_PENGANTARAN'	=> $this->input->post('TGL_ENGANTARAN')
+    );
+    $this->notifikasimodel->tambah($data);
+    redirect('notifikasicon');
+}
 
 }
 ?>
