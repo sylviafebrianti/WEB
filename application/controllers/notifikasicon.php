@@ -16,7 +16,8 @@ class Notifikasicon extends CI_Controller {
 		var_dump($data);
 		$this->load->view('pesanan',$data);
 		
+	
 	}
- 
+
 }
 ?>

@@ -5,14 +5,16 @@
 #kiri
 {
 width:50%;
-height:350px;
+height: 10px;
 float:left;
+margin-left: 40px;
 }
 #kanan
 {
 width:50%;
-height:100px;
+height:150px;
 float:right;
+margin-left: 200px;
 }
 input[type=text],
 input[type=number],
@@ -71,8 +73,8 @@ label {
      margin-right: auto;
      }
 #baba{
-	padding: 10px;
-	margin-left: 10px;
+	padding: 15px;
+	margin-left: 20px;
 }
 #ini{
   width: 300px;
@@ -93,7 +95,7 @@ body {
 <body>
 <center><h2>DETAIL TRANSAKSI</h2></center>
 <?php foreach($pesanan as $row){?>
-<form action="<?php echo base_url().'detail/update'?>" method="post">
+<form action="<?=base_url().'notifikasicon/update'?>" method="POST">
 <div id="la">
 <div id="baba">
     <input name="ID_PEMESANAN" type="text" value="<?php echo $row->ID_PEMESANAN;?>" readonly/>
@@ -105,38 +107,38 @@ body {
 
 <div id="kiri">	
 	<label class="first-name">Nama</label>
-    <input name="nama" type="text" value="<?php echo $row->NAMA_PELANGGAN;?>">
+    <input name="nama" type="text" value="<?php echo $row->NAMA_PELANGGAN;?>" readonly/>
 		</br>
 	<label  class="first-name">Alamat</label>
-    <input name="alamat" type="text" value="<?php echo $row->ALAMAT;?>">
+    <input name="alamat" type="text" value="<?php echo $row->ALAMAT;?>" readonly/>
 		</br>
 	<label class="first-name">Nomer Handphone</label>
-    <input name="nohp" type="text" placeholder="Nomer Hp">
+    <input name="nohp" type="text" value="<?php echo $row->NO_HP;?>"readonly/>
 		</br>
 		<label class="first-name">Nama Parfum</label>
-		<input name="namaparfum" type="text" placeholder="namaparfum">
+		<input name="namaparfum" type="text" value="<?php echo $row->NAMA_PARFUM;?>"readonly/>
 		
  <h3>Laundry Kiloan</h3>
  <label class="first-name">Layanan</label>
- <input name="layanan" type="text" placeholder="layanan">
+ <input name="layanan" type="text" value="<?php echo $row->JENIS_LAYANAN_CUCI;?>"readonly/>
      </br>
 	<label class="first-name">Berat</label>
-    <input name="berat" type="number" placeholder="Berat/kg">
+    <input name="berat" type="number" value="<?php echo $row->BERAT;?>"readonly/>
     </br>
 	<label class="first-name">Harga</label>
-    <input name="harga" type="text" placeholder="Harga">
+    <input name="harga" type="text" value="<?php ?>">
  </div>
  </br>
  
  <div id="kanan">
 	<label for="tglmasuk" class="first-name">Tanggal Masuk</label>
-    <input name="tglmasuk" type="date" placeholder="Tanggal Masuk">
+    <input name="tglmasuk" type="date" value="<?=$r['TGL_PEMESANAN']?>" ?>">
     </br>
 	<label for="tglkeluar" class="first-name">Tanggal Keluar</label>
-    <input name="tglkeluar" type="date" placeholder="Tanggal Keluar">
+    <input name="tglkeluar" type="date" value="<?=$r['TGL_PENGIRIMAN']?>">
     </br>
     <label for="status" class="first-name">Status</label>
-	<select name="status" >
+	<select name="status">
     <option value="proses"> Proses </option>
     <option value="selesai" selected> Selesai </option>
     </select>
@@ -144,13 +146,9 @@ body {
 
 
 <div id="kanan">
- </br>
-</br>
-</br>
-</br>
 </br>
     <h3>Laundry Satuan</h3>
- 	<label for="layanan" class="first-name">Layanan</label>
+ 	<label for="layanan" class="first-name">Barang Satuan</label>
 	<input name="layanan" type="text" placeholder="">
      </br>
 	<label for="jumlah" class="first-name">Jumlah</label>
@@ -165,7 +163,7 @@ body {
 	</div>
 	</br>
 	<div id="ini">
-		<a href="<?php echo base_url()?>pesananlaundry/kembali"  class="tombol">SIMPAN </a>
+		<td><input type="submit" name="submit" value="Simpan"></td>
 	</div>
 	
 </form>
