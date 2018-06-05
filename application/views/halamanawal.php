@@ -145,11 +145,7 @@ div.content{
 
 <div style="margin-left: 140px;">
 <div class="button">
-<<<<<<< HEAD
 <a href="<?php echo base_url()?>layanan/index"><img src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="200" height="200"/>
-=======
-<a href="<?php echo base_url()?>layanan/index"><img src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="250" height="250" />
->>>>>>> 1d9f1a50032e9e286b0e43c569d68364582408cb
 	</a>
 </div>
 

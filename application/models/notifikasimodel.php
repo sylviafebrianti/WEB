@@ -26,7 +26,7 @@ class Notifikasimodel extends CI_Model{
 		$data=$this->db->get($tabel);
 		return $data->result_array();
 	}
-	function input_data($data,$table){
+	function input_data($table,$data){
 		$this->db->insert($table,$data);
 	}
 

@@ -27,8 +27,8 @@ class Notifikasicon extends CI_Controller {
 			$this->load->model('notifikasimodel');
 			$model = $this->notifikasimodel->kode_otomatis('pemesanan');
 			$ID_PEMESANAN =$model;
-			$BERAT_LAYANAN = $this->input->post('BERAT_LAYANAN');
-			$STATUS_PEMESANAN = $this->input->post('STATUS_PEMESANAN');
+			$BERAT_LAYANAN = $this->input->post('berat');
+			$STATUS_PEMESANAN = $this->input->post('status');
 			$data = array('ID_PEMESANAN'=>$ID_PEMESANAN, 'BERAT_LAYANAN'=>$BERAT_LAYANAN, 'STATUS_PEMESANAN'=>$STATUS_PEMESANAN);
 			$this->notifikasimodel->input_data('pemesanan', $data);
 			redirect('notifikasicon');
