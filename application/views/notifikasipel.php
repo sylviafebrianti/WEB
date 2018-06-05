@@ -59,6 +59,23 @@ body{
      background-attachment: fixed;
      background-repeat: no-repeat;
 }
+table tr:hover td {
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+  background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
+}
+.tombol { 
+   padding: 10px 20px;
+   background: #50b4e9;
+   color: white;
+   width: 100px;
+   margin: 20px;
+   border-radius: 5px;
+   margin-left: 650px;
+}
+.tombol:hover {
+   background: #cfcfc9;
+}
 	</style>
 
 </head>
@@ -101,9 +118,10 @@ body{
 	<td align="center"><a href="<?php echo base_url()?>notifikasicon/pesanan" rel="stylesheet">Proses</a></td>	
 </tr>
                   <?php } ?>
-
-
       </table>
+      <div class="tombol">
+      	<center><td><a href="<?php echo base_url()?>loginlaundry/home" style="color:#000011">Kembali</a></td></center>
+      </div>
 
 </body>
 

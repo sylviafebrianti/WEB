@@ -64,10 +64,22 @@ body{
      background-attachment: fixed;
      background-repeat: no-repeat;
 }
+.tombol { 
+   padding: 15px 25px;
+   background: #50b4e9;
+   color: white;
+   width: 100px;
+   margin: 20px;
+   border-radius: 5px;
+   margin-left: 700px;
+}
+.tombol:hover {
+   background: #cfcfc9;
+}
 	</style>
 
 </head>
-
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" />
 <body >
 
       <center><h1>Data Pelanggan </h1></center>
@@ -100,12 +112,11 @@ body{
 	<td><?php echo $row-> USERNAME_PELANGGAN;?></td>
 	<td><?php echo $row-> PASSWORD_PELANGGAN;?></td>
 </tr>
-
-
                   <?php } ?>
-
-
       </table>
+      <div class="tombol">
+      	<center><td><a href="<?php echo base_url()?>loginlaundry/home" style="color:#000011">Kembali</a></td></center>
+      </div>
 
 </body>
 

@@ -15,14 +15,28 @@ class Notifikasicon extends CI_Controller {
 		$data['pesanan']=$this->notifikasimodel->tampil2();
 		$this->load->view('pesanan',$data);
 	}
-	function tambah(){
-    $data = array(
-        'TGL_PEMESANAN'		=> $this->input->post('TGL_PEMESANAN'),
-        'TGL_PENGANTARAN'	=> $this->input->post('TGL_ENGANTARAN')
-    );
-    $this->notifikasimodel->tambah($data);
-    redirect('notifikasicon');
-}
+	//insert data
+	
+	public function kode(){
+		$data['kodeunik'] = $this->notifikasimodel->kode_otomatis();
+		$data= $this->notifikasimodel->GetTable('pemesanan');
+		$this->load->view('pesanan', array('data'=>$data));
+	}
+	public function insert(){
+		if(isset($_POST['submit'])){
+			$this->load->model('notifikasimodel');
+			$model = $this->notifikasimodel->kode_otomatis('pemesanan');
+			$ID_PEMESANAN =$model;
+			$BERAT_LAYANAN = $this->input->post('BERAT_LAYANAN');
+			$STATUS_PEMESANAN = $this->input->post('STATUS_PEMESANAN');
+			$data = array('ID_PEMESANAN'=>$ID_PEMESANAN, 'BERAT_LAYANAN'=>$BERAT_LAYANAN, 'STATUS_PEMESANAN'=>$STATUS_PEMESANAN);
+			$this->notifikasimodel->input_data('pemesanan', $data);
+			redirect('notifikasicon');
+		}
+		else {
+			$this->load->view('pemesanan');
+		}
+	}
 
 }
 ?>
