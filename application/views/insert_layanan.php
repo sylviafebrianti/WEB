@@ -48,15 +48,16 @@ input{
 	margin-top: 15px;
 	margin-bottom: 5px;
 }
-img {
+body{
+	background: url('<?php echo base_url('assets/img/lo.png'); ?>');
 	background-size: cover;
-	width: 1500px;
-	height: 715px;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
 }
 </style>
 
 <body>
-<img src="<?php echo base_url('assets/img/background.jpeg') ?>">
+
 <div class="body">
 
 <h1><div class="h1">Data Jenis Layanan</div></h1>

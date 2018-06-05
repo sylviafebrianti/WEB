@@ -1,5 +1,5 @@
 <html>
-<head></head>
+<head>
 <style>
 .tablezebra {
 	font-family : sans-serif;
@@ -7,9 +7,7 @@
 	border-collapse : collapse;
 	width : 75%;
 	border: 1px solid #f2f5f7;
-	position : fixed;
-	top : 13%;
-	left : 13%;
+	margin : auto;
 	border-radius: 25px;
 }
 .tablezebra tr th{
@@ -31,9 +29,6 @@
 	font-family : sans-serif;
 	width: 20x;
 	height: 50px;
-	position : fixed;
-	top : 2%;
-	left : 43%;
 }
 .button ul a{
 	padding: 10px;
@@ -42,10 +37,12 @@
 	border-radius: 3px;
 }
 </style>
-<body style="background-color:powderblue">
+</head>
+<body style="background-color:powderblue; padding : 30px; text-align : center">
 <p align="center"><div class="button">
 <ul><a href="<?php echo base_url()?>layanan/insert">Tambah Data</a></ul></div></p>
-</head>
+
+
 <table border="1" class="tablezebra">
 <tr>
 <th>NO</th>
@@ -75,4 +72,6 @@ $no++;
 ?>
 
 </table>
+<p align="left" style="padding: 5px;"><div class="button">
+<ul><a href="<?php echo base_url()?>loginlaundry/home">Kembali</a></ul></div></p>
 </html>

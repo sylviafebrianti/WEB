@@ -8,7 +8,7 @@
 	width : 75%;
 	border: 1px solid #f2f5f7;
 	border-radius: 25px;
-	margin : auto
+	margin : auto;
 }
 .tablezebra tr th{
 	background : #87CEFA;
@@ -29,6 +29,7 @@
 	font-family : sans-serif;
 	width: 20x;
 	height: 50px;
+	text-decoration: none;
 }
 .button ul a{
 	padding: 10px;
@@ -57,6 +58,8 @@ $no=1;
 foreach($data as $r) {
 ?>
 
+
+
 <tr>
 <td><?php echo $no ?></td>
 <td><?php echo $r['ID_BARANG_SATUAN'] ?></td>
@@ -67,11 +70,15 @@ foreach($data as $r) {
 <td><a href="<?=base_url().'barang_satuan/delete/'.$r['ID_BARANG_SATUAN']?>"><img src="<?php echo base_url('assets/img/deletenew.png') ?>" width="30" height="33"></a></td>
 </tr>
 
+
+
 <?php
 $no++;
 }
 ?>
 
 </table>
+<p align="left" style="padding: 5px;"><div class="button">
+<ul><a href="<?php echo base_url()?>loginlaundry/home">Kembali</a></ul></div></p>
 </body>
 </html>
