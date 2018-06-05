@@ -64,9 +64,9 @@ div.content{
        /*teks rata tengah*/
         text-align: center;
        /*atur jarak margin/luar*/
-        margin: 100px 200px;
+        margin: 100px 50px;
         border-radius: 30px;
-        margin-left: 80px;
+        margin-left: -70px;
         position: fixed;
        /*atur jarak padding/dalam*/
         padding: 30px 30px;
@@ -83,9 +83,9 @@ div.content{
        /*teks rata tengah*/
         text-align: center;
        /*atur jarak margin/luar*/
-        margin: 100px 500px;
+        margin: 100px 50px;
         border-radius: 30px;
-        margin-left: 350px;
+        margin-left: 315px;
         position: fixed;
        /*atur jarak padding/dalam*/
         padding: 35px 35px;
@@ -103,7 +103,7 @@ div.content{
         text-align: center;
        /*atur jarak margin/luar*/
         margin: 100px 800px;
-        margin-left: 620px;
+        margin-left: 700px;
         border-radius: 30px;
         position: fixed;
        /*atur jarak padding/dalam*/
@@ -115,7 +115,7 @@ div.content{
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
+<body style="background-color: aliceblue;>
 <div class="w3-sidebar w3-bar-block" style="width:20%; color:#ffffff; background-color: #82b3d2">
   <ul>
   	<img style=" width: 85%; display:block; height: auto; padding: 20px 25px; margin-left: 20px;" src="<?php echo base_url(); ?>assets/img/eLaundry2.png">
@@ -145,7 +145,7 @@ div.content{
 
 <div style="margin-left: 140px;">
 <div class="button">
-<a href="<?php echo base_url()?>layanan/index"><img src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="250" height="250"/>
+<a href="<?php echo base_url()?>layanan/index"><img src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="250" height="250" />
 	</a>
 </div>
 
