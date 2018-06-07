@@ -145,16 +145,16 @@ div.content{
 
 <div style="margin-left: 140px;">
 <div class="button">
-<a href="<?php echo base_url()?>layanan/index"><img src="<?php echo base_url(); ?>assets/img/layanan (2).png" width="200" height="200"/>
+<a href="<?php echo base_url()?>layanan/index"><img src="<?php echo base_url(); ?>assets/img/CCC.png" width="200" height="200" />
 	</a>
 </div>
 
 <div class="button2">
-<a href="<?php echo base_url()?>belajar_crud/index"><img src="<?php echo base_url(); ?>assets/img/parfum1.png" width="190" height="190"/></a>
+<a href="<?php echo base_url()?>belajar_crud/index"><img src="<?php echo base_url(); ?>assets/img/BBB.png" width="200" height="200"/></a>
 </div>
 
 <div class="button3">
-<a href="<?php echo base_url()?>barang_satuan/index"><img src="<?php echo base_url(); ?>assets/img/barangsatuan.png" width="200" height="200"/></a>
+<a href="<?php echo base_url()?>barang_satuan/index"><img src="<?php echo base_url(); ?>assets/img/aaa.png" width="200" height="200"/></a>
 </div>
 </div>
 
